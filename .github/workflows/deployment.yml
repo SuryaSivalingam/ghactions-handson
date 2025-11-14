@@ -13,11 +13,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Linting Node code
-        run : npm lint
+        run : npm run lint
       - name: Running Node tests
-        run: npm test
+        run: npm run test
       - name: Building the node package
-        run: npm build
+        run: npm run build
       - name: Deploy the package
         run: echo "Deploying..."
       
