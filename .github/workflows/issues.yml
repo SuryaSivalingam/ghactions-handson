@@ -1,0 +1,12 @@
+name: Issue-Mgmt-workflow
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened,edited]
+
+jobs:
+  issue-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing issue context
+        run: echo " {{ toJSON(github.event) }}"
